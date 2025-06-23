@@ -17,7 +17,7 @@ describe("Movie tests", () => {
   });
 
   test("The first happy path'", async () => {
-     await clickElement(page, "[data-time-stamp='1750366800']");
+     await clickElement(page, "[data-time-stamp='1750885200']");
      await clickElement(page, ".movie-seances__time[href='#'][data-seance-id='217']");
      await clickElement(page, ".buying-scheme__chair.buying-scheme__chair_standart");
      await clickElement(page, ".acceptin-button");
