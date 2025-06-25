@@ -20,23 +20,6 @@ After(async function () {
 });
 
 Given("user is on {string} page", async function (string) {
-  return await this.page.goto(`https://netology.ru${string}`, {
-    setTimeout: 20000,
-  });
-});
-
-When("user search by {string}", async function (string) {
-  return await putText(this.page, "input", string);
-});
-
-Then("user sees the course suggested {string}", async function (string) {
-  const actual = await getText(this.page, "a[data-name]");
-  const expected = await string;
-  expect(actual).contains(expected);
-});
-
-
-Given("user is on {string} page", async function (string) {
   return await this.page.goto(`http://qamid.tmweb.ru/client/index.php${string}`);
   });
 
@@ -63,23 +46,23 @@ Then("user sees title {string}", async function (string) {
 });
 
 
-When("user click by seance time", async function () {
+When("user click by seance time2", async function () {
   return await clickElement(this.page, ".movie-seances__time[href='#'][data-seance-id='228']");
 });
 
-When("user click by chair", async function () {
+When("user click by chair2", async function () {
   return await clickElement(this.page, ".buying-scheme__chair.buying-scheme__chair_standart");
 });
 
-When("user click by button", async function () {
+When("user click by button2", async function () {
   return await clickElement(this.page, ".acceptin-button");
 });
 
-When("user click by button2", async function () {
+When("user click by second button", async function () {
   return await clickElement(this.page, ".acceptin-button", onclick="[location.href='scripts/sale_save.php']");
 });
     
-Then("user sees title {string}", async function (string) {
+Then("user sees title2 {string}", async function (string) {
   const actual = await getText(this.page, ".ticket__info");
   const expected = await string;
   expect(actual).contains(expected);

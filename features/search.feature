@@ -1,9 +1,4 @@
-Feature: Search a course
-    Scenario: Should search by text
-        Given user is on "/navigation" page
-        When user search by "тестировщик"
-        Then user sees the course suggested "Тестировщик ПО"
-
+Feature: Cinema
     Scenario: Booking a movie ticket
         Given user is on "/navigation" page
         When user click by data
@@ -14,11 +9,11 @@ Feature: Search a course
 
     Scenario: Bying a movie ticket
         Given user is on "/navigation" page  
-        When user click by seance time
-        When user click by chair
-        When user click by button
+        When user click by seance time2
+        When user click by chair2
         When user click by button2
-        Then user sees title "На фильм: Мир Юрского периода"
+        When user click by second button
+        Then user sees title2 "На фильм: Мир Юрского периода"
 
     Scenario: Attempt to buy a ticket for a past date
         Given user is on "/navigation" page 
